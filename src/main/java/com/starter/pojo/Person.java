@@ -1,11 +1,10 @@
 package com.starter.pojo;
 
 import java.io.Serializable;
-import java.text.MessageFormat;
 
 public class Person implements Serializable {
 
-    static int nextId;
+    private static int nextId;
     private final Integer id;
     private String firstName;
     private String lastName;
@@ -34,6 +33,6 @@ public class Person implements Serializable {
 
     @Override
     public String toString() {
-        return MessageFormat.format("Person'{'id={0}, firstName=''{1}'', lastName=''{2}'''}'", id, firstName, lastName);
+        return String.format("Person{id=%d, firstName='%s', lastName='%s'}", id, firstName, lastName);
     }
 }
