@@ -5,15 +5,13 @@ import java.text.MessageFormat;
 
 public class Person implements Serializable {
 
-    private Integer id = 0;
+    static int nextId;
+    private Integer id;
     private String firstName;
     private String lastName;
 
-    {
-        id = id++;
-    }
-
     public Person(String firstName, String lastName) {
+        this.id = nextId++;
         this.firstName = firstName;
         this.lastName = lastName;
     }

@@ -27,7 +27,7 @@ public class FileUtility {
         return filePath;
     }
 
-    public static void writeObjectToFile(java.io.Serializable object, Path path) throws IOException {
+    public static void writeObjectToFile(Object object, Path path) throws IOException {
         if (Files.exists(path)) {
             try (FileOutputStream fileOutputStream = new FileOutputStream(path.toString());
                  ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
