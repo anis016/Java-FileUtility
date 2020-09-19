@@ -6,7 +6,7 @@ import java.text.MessageFormat;
 public class Person implements Serializable {
 
     static int nextId;
-    private Integer id;
+    private final Integer id;
     private String firstName;
     private String lastName;
 
@@ -14,10 +14,6 @@ public class Person implements Serializable {
         this.id = nextId++;
         this.firstName = firstName;
         this.lastName = lastName;
-    }
-
-    public Integer getId() {
-        return id;
     }
 
     public String getFirstName() {
