@@ -27,10 +27,9 @@ public class ObjectReadWriteDemo {
     }
 
     public static List<Person> generateListOfPersons() {
-        List<Person> personList = IntStream.range(0, 10)
+        return IntStream.range(0, 10)
                 .mapToObj(person -> new Person(generate(), generate()))
                 .collect(Collectors.toList());
-        return personList;
     }
 
     public static void main(String[] args) throws IOException {
